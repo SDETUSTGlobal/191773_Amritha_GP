@@ -1,0 +1,18 @@
+ body{ background-color: teal;
+            }
+            .real{
+            color: Black;
+
+text-align:center;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  background-color:white;
+  opacity: 0.5;
+  text-align: center;
+  colour: green;
+}
+#card p{
+colour:black;}
