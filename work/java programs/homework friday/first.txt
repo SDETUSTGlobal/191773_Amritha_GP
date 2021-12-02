@@ -1,0 +1,35 @@
+class Family
+{
+	protected void talk()
+	{
+		System.out.println("talking");
+	}
+	
+	public void eat()
+	{
+		System.out.println("eating");
+		
+	}
+	void walk()
+	{
+		System.out.println("walking");
+	}
+	
+}
+public class Nuclearfamily extends Family
+{private void sit()
+	{
+		System.out.println("sitting");
+	}
+	public static void main(String args[])
+	{
+
+		Nuclearfamily obj = new Nuclearfamily();
+		obj.talk();
+		obj.eat();
+	        obj.walk();
+	
+		obj.sit();}}
+	
+		
+	

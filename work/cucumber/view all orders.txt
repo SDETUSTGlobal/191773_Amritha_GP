@@ -1,0 +1,74 @@
+package features;
+import org.openqa.selenium.By;  
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;  
+import cucumber.annotation.en.Given;  
+import cucumber.annotation.en.Then;  
+import cucumber.annotation.en.When;    
+public class VAO{
+WebDriver driver= null;
+ @Given("^I am on user login page$")  
+ public void goToWebLogin() {  
+System.setProperty("webdriver.chrome.driver", "C://Users//user//Downloads//chromedriver_win32//chromedriver.exe");
+ driver= new ChromeDriver();
+ driver.navigate().to("http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Default.aspx");  
+ }  
+   
+ @When("^I enter valid data on the page$")  
+ public void enterData(){
+
+driver.findElement(By.id("ctl00_MainContent_btnCheckAll")).click();
+
+
+driver.findElement(By.id("ctl00_MainContent_btnDelete")).click();
+driver.findElement(By.id("ctl00_MainContent_orderLInk")).click();
+driver.navigate().back();
+driver.navigate().back();
+driver.findElement(By.id("ctl00_MainContent_btnUncheckAll")).click();
+driver.findElement(By.id("ctl00_MainContent_orderGrid_ctl02_OrderSelector")).click();
+driver.findElement(By.id("ctl00_MainContent_btnUncheckAll")).click();
+}
+ @Then("^User login should be successful$")  
+ public void User_login_should_be_successful() { if(driver.getTitle().equalsIgnoreCase("Web Orders")){  
+     System.out.println("Test Pass");  
+  } else {  
+     System.out.println("Test Failed");  
+  }  
+
+  driver.close();  
+ 
+}
+}
+
+Runtest file
+
+package features;  
+import org.junit.runner.RunWith;   
+import cucumber.junit.Cucumber;   
+@RunWith(Cucumber.class)   
+@Cucumber.Options(format = {"pretty", "html:target/cucumber"})  
+public class RunTest2 { }
+
+feature
+Feature: View all orders
+Given the user is on the view all orders page.
+Scenario: Check all button.
+Given user on the View all orders Page:
+And user clicks Check all button
+Then user should see all orders checked
+Scenario: Uncheck all button View all orders Page
+Given user on the View all orders page
+And user clicks Uncheck all button.
+Then user should see desired orders unchecked.
+Scenario: Check box checking and unchecking
+Given user on the View all orders Page 
+And user clicks desired order's check box
+Then user should see desired orders checked/unchecked.
+Scenario: Delete selected button
+Given user on the View all orders Page
+And user clicks Delete selected button
+Then user should see all selected orders unchecked.
+Scenario: Edit 
+Given user on the view all orders Page
+And user clicks Edit
+Then user should be able to edit selected order.

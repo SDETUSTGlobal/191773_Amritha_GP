@@ -1,0 +1,30 @@
+interface Animal
+{
+	void walk();
+}
+interface Dog 
+{
+	void bark();
+}
+public class Cat implements Animal,Dog
+{
+    public void meow()
+	{
+		System.out.println("meow");
+	}
+	public void walk()
+	{
+		System.out.println("walking");
+	}
+	public void bark()
+	{
+		System.out.println("Barking");
+	}
+	public static void main(String args[])
+	{
+		Cat obj =new Cat();
+		obj.meow();
+		obj.walk();
+		obj.bark();
+	}
+}

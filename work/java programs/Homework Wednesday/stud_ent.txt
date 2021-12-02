@@ -1,0 +1,31 @@
+
+class Student{  
+   int rollno;//instance variable  
+   String name;  
+   static String college ="XYZ"; 
+     
+   Student(int r, String n){  
+   rollno = r;  
+   name = n;  
+   }  
+     
+   void display (){System.out.println(rollno+" "+name+" "+college);}  
+}  
+  
+public class TestStaticVariable1{  
+ public static void main(String args[]){  
+ Student s1 = new Student(11,"Amritha");  
+ Student s2 = new Student(22,"Ananya");  
+ Student s3 = new Student(33,"Aromal");  
+ Student s4 = new Student(44,"Alok");  
+ Student s5 = new Student(55,"Suma");  
+ 
+ 
+ s1.display(); 
+ s2.display(); 
+ s3.display(); 
+ s4.display();  
+s5.display(); 
+
+ }  
+}  

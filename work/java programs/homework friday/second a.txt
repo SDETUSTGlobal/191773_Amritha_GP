@@ -1,0 +1,30 @@
+interface Bird
+{
+	void fly();
+}
+interface Nightingale extends Bird
+{
+	void sing();
+}
+public class Sparrow implements Nightingale
+{
+    public void chirp()
+	{
+		System.out.println("chirping");
+	}
+	public void fly()
+	{
+		System.out.println("flying");
+	}
+	public void sing()
+	{
+		System.out.println("singing");
+	}
+	public static void main(String args[])
+	{
+		Sparrow obj =new Sparrow();
+		obj.chirp();
+		obj.fly();
+		obj.sing();
+	}
+}

@@ -1,0 +1,27 @@
+interface B
+{ interface C
+{public void eat();
+}
+}
+abstract class Bike{  
+   Bike()
+{System.out.println("new bike");}  
+   abstract void run();  
+   void stop(){System.out.println("stopped");}  
+ }  
+
+ class Honda extends Bike{  
+ void run(){System.out.println("running");}  
+ }  
+
+public class Vehicle implements B.C{
+  public void eat()
+{System.out.println("eating");}
+ public static void main(String args[]){  
+  Bike obj = new Honda();  
+  obj.run();  
+  obj.stop(); 
+B.C o=new Vehicle();
+o.eat(); 
+ }  
+} 

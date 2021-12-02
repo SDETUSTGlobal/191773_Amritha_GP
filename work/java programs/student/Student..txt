@@ -1,0 +1,25 @@
+import java.io.*;
+public class StudentTest {
+
+   public static void main(String args[]) {
+      /* Create two objects using constructor */
+      Student studentOne = new Student(" James Smith");
+      Student studentTwo = new Student("Mary Anne");
+      Student studentThree = new Student("Smith");
+      // Invoking methods for each object created
+      studentOne.studentAge(20);
+      
+      studentOne.studentMarks(10);
+      studentOne.printstudent();
+
+      studentTwo.studentAge(21);
+      
+      studentTwo.studentMarks(500);
+      studentTwo.printStudent();
+        
+      studentThree.studentAge(16)
+
+      studentThree.studentMarks(100);
+      studentThree.printStudent();
+   }
+}

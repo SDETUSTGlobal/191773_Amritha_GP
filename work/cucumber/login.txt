@@ -1,0 +1,60 @@
+package cucumberexample;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import cucumber.annotation.en.Given;
+import cucumber.annotation.en.Then; 
+import cucumber.annotation.en.When;
+public class Example1{
+WebDriver driver=null;
+@Given ("I am on user home page$") 
+public void User_is_on_Home_Page () {
+System.setProperty("webdriver.chrome.driver", "C://Users//user//Downloads//chromedriver_win32//chromedriver.exe");
+//Initiate web browser instance. driver new ChromeDriver ():
+driver=new ChromeDriver();
+driver.navigate().to ("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
+}
+@When ("^User enters login credentials$")
+
+@Then ("^User registration should be successful$") 
+public void User_enters_testuser_and_Test(Example1 usercredenetials){
+List<List<String>> data = usercredenetials.raw();
+driver.findElement(By.id("ct100_MainContent_username")).sendKeys("Tester");  
+driver.findElement(By.id("ct100_MainContent_password")).sendKeys("Test");
+driver.findElement(By.name("ct100_MainContent_login_button")).click();  
+}
+private List<List<String>> raw() {
+	// TODO Auto-generated method stub
+	return null;
+}
+@Then("^Message displayed login succesful$")
+public void message_displayed_Login_Succesful(){
+System.out.println("Login Succesful");}
+}
+
+
+
+
+
+
+Runtest1
+
+
+package cucumberexample;  
+import org.junit.runner.RunWith;   
+import cucumber.junit.Cucumber;   
+@RunWith(Cucumber.class)   
+@Cucumber.Options(format = {"pretty", "html:target/cucumber"})  
+public class Runtest1 { }
+
+
+feature file
+
+Feature: Login Function
+Scenario: Login
+Given User is on homepage 
+When User enters the correct username and Password  
+| Tester | test |
+Then Message displayed Login Succsesfull

@@ -1,0 +1,50 @@
+2.
+class Writer
+{
+  String WriterName;
+  int age;
+  String place;
+
+  // Writer class constructor
+  Writer(String name, int age, String place)
+  {
+    this.WriterName = name;
+    this.age = age;
+    this.place = place;
+  }
+}
+
+public class  Book
+{
+  String name;
+  int price;
+  // Writer details
+  Writer auther;
+  Book(String n, int p, Writer auther)
+  {
+    this.name = n;
+    this.price = p;
+    this.auther = auther;
+  }
+  public static void main(String[] args) {
+int[] arr;
+      arr = new int[5];
+      arr[0] = 10;
+      arr[1] = 20;
+      arr[2] = 30;
+      arr[3] = 40;
+      arr[4] = 50;
+      for (int i = 0; i < arr.length; i++)
+         System.out.println("Element at index " + i + 
+                                      " : "+ arr[i]);          
+  Writer auther = new Writer("John", 42, "USA");
+    Book b = new Book("Java for Begginer", 800, auther);
+    System.out.println("Book Name: "+b.name);
+    System.out.println("Book Price: "+b.price);
+   
+    System.out.println("Auther Name: "+auther.WriterName);
+    System.out.println("Auther Age: "+auther.age);
+    System.out.println("Auther place: "+auther.place);
+  }
+  
+}

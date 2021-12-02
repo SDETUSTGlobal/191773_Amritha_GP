@@ -1,0 +1,22 @@
+interface Bird
+{
+	
+	default void chirp()
+	{
+		System.out.println("chirping");
+	}
+	static String eat(String s)
+	{
+		return s;
+	}
+}
+public	class Vulture implements Bird
+	{
+		public static void main(String args[])
+		{
+			Vulture obj=new Vulture();
+			
+                        obj.chirp();
+			System.out.println(Bird.eat("eating"));
+		}
+	}

@@ -1,0 +1,43 @@
+public class Method
+{int p;
+double median;
+double avg;
+int min;
+int max;
+ public void total(int n)
+ {System.out.println("percentage is "+ (p=n/100)+"%");
+ }
+ public void total(int n1,int n2,int n6,int n7)
+ {System.out.println("median is "+ (median=(n1+n2+n6+n7)/2));
+ }
+ public void total(int n3,int n4,int n5,int n10,int n14)
+ {System.out.println("average is "+ (avg=(n3+n4+n5+n10+n14)/5));
+ }
+ public void total(int n8,int n9)
+ {if(n8>n9)
+	 {System.out.println(n8 + " is greater");
+	 }
+	 else
+	 {System.out.println(n9 + " is greater");
+	 }
+ }
+ public void total(int n11,int n12,int n13)
+ {if((n11<n12)&&(n11<n13))
+	 {System.out.println(n11 + " is lesser");
+	 }
+	else if((n12<n11)&&(n12<n13))
+	 {System.out.println(n12 + " is lesser");
+	 }
+	 else
+	 {System.out.println(n13 + " is lesser");
+	 }
+ }
+ public static void main(String args[])
+ {Method c=new Method();
+ c.total(8000);
+ c.total(1,2,3,4);
+ c.total(5,6,7,8,9);
+ c.total(3,4);
+ c.total(6,7,8);
+ }
+}

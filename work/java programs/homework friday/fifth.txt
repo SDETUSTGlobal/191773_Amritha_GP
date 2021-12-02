@@ -1,0 +1,74 @@
+ public class Calculation6 extends Exception{  
+ int input=50,input2=30;
+
+ static int c=0;
+ public Calculation6(String s)
+ {
+    super(s);
+ }
+  
+  
+ void change(Calculation6 op){  
+ op.input=op.input+100;
+ }  
+     void change1(int input){  
+ input2=input2+100;
+ }  
+static void rec() throws Calculation6{    
+         
+            
+       c++;
+        if(c>3)
+           {throw new Calculation6("c is greater than 3");  } 
+       else
+        {System.out.println(c);  }
+        
+         rec();
+        }
+    
+ public static void main(String args[])
+ throws ClassNotFoundException
+    {
+ try {
+           
+           Class temp=Class.forName("Calculation6");
+           int b=20; 
+Integer j=Integer.valueOf(b);
+
+System.out.println(b+" "+j);  
+            }
+        catch (ClassNotFoundException e) {
+           
+            System.out.println(
+                "Class does not exist check the name of the class");
+        }
+     
+   Calculation6 op=new Calculation6("c is less than 3");  
+ 
+   System.out.println("before change "+op.input);  
+   op.change(op);
+   System.out.println("after change "+op.input);  
+   System.out.println("before change "+op.input2);  
+   op.change1(500);  
+   System.out.println("after change "+op.input2);  
+    
+   int a[]={33,3,4,5};
+for(int i=0;i<a.length;i++)
+System.out.println(a[i]);  
+try{
+System.out.println(a[2]/0);
+}catch(ArithmeticException e){System.out.println(e);}  
+    
+ try{
+rec();
+}
+catch( Calculation6 ex)  
+        {  
+            System.out.println("Caught the exception");  
+     System.out.println("Exception occured: " + ex);  
+        }  
+
+   
+  
+ }  
+}  

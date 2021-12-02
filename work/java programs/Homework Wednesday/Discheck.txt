@@ -1,0 +1,81 @@
+public class Discheck {
+
+   public static void main(String args[]) {
+      
+      char grade = 'E';
+
+      switch(grade) {
+         case 'A' :
+		 {for(int i=1;i<100;i++)
+			 {if((i%2)!=0)
+				 {
+            System.out.println(i); 
+            
+				 }
+			 }
+			 break;
+		 }
+         case 'B' :
+		 {for(int i=1;i<100;i++)
+			 {if((i%2)==0)
+				 {
+            System.out.println(i); 
+            
+				 }
+			 }
+			 break;
+		 }
+         case 'C' :
+		 {int x=25;
+			 
+            int sr = (int)Math.sqrt(x);
+           
+         if(sr*sr== x)
+		 {System.out.println("perfect square");
+		 }
+		 else
+	     {System.out.println("not a perfect square");
+		 } break;
+		 }
+         case 'D' :
+		 {int num=-5;
+		 if(num>=0)
+		 {
+            System.out.println("+ve");
+		 }
+		 else{System.out.println("-ve");
+		 }break;
+		 }
+         case 'E' :
+		 {
+			 int a=3;
+			 int b=15;
+			 int c=10;
+			 if((a>b)&&(a>c))
+			 {
+			 System.out.println(a+" is greater");}
+			 else if((b>a)&&(b>c))
+			 {
+			 System.out.println(b+" is greater");}
+			 else{
+			
+			 System.out.println(c+" is greater");}
+            break;
+		 }
+		 case 'F':
+		 {int number=987;
+		 int rev=0;
+		 while(number!=0)
+		 {int remainder=number%10;
+	 rev=rev*10+remainder;
+	 number=number/10;
+		 }
+		 System.out.println("reverse is "+rev);
+		 break;
+		 }
+         default :
+            System.out.println("Invalid grade");
+      }
+      System.out.println("Your grade is " + grade);
+   }
+}

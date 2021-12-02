@@ -1,0 +1,33 @@
+import java.io.*;
+public class Student {
+   String name;
+   int age;
+   
+   double marks;
+   // This is the constructor of the class Student
+   public Student(String name) {
+      this.name = name;
+   }
+
+   // Assign the age of the Student  to the variable age.
+   public void studentAge(int studentAge) {
+      age = studentAge;
+   }
+
+   
+   
+   
+
+   /* Assign the Marks to the variable	marks.*/
+   public void studentMarks(double studentMarks) {
+      marks = studentMarks;
+   }
+
+   /* Print the Student details */
+   public void printStudent() {
+      System.out.println("Name:"+ name );
+      System.out.println("Age:" + age );
+      
+      System.out.println("Marks:" + marks);
+   }
+}

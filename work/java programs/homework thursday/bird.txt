@@ -1,0 +1,22 @@
+3.
+class Bird{  
+
+  void chirp()
+  {
+	  System.out.println("chirping");
+  }  
+}  
+public class vulture extends Bird{  
+  void chirp()
+  {
+	  System.out.println("chirping and sleeping");
+	 }  
+  
+  public static void main(String args[])
+  {  
+    Bird b = new vulture();
+    b.chirp(); 
+	vulture c =new vulture();
+	System.out.println(c instanceof Bird);
+  }  
+}  

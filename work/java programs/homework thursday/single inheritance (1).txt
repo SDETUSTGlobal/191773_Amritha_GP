@@ -1,0 +1,34 @@
+
+1.
+a)
+
+class Single
+{
+String lname;
+public Single(String n)
+{
+lname = n;
+}
+}
+public class Main extends Single {
+String lname;
+public Main(String x1, String x2)
+{
+super(x1);       
+this.lname = x2;
+System.out.println("wow");
+}
+ 
+{System.out.println("wonderful");
+}
+
+public void display()
+{
+System.out.println(super.lname+" and "+lname);
+}
+public static void main(String[] args)
+{
+Main c = new Main("Single name","Single id");
+c.display();
+}
+}

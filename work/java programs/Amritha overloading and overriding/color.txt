@@ -1,0 +1,29 @@
+class Colour
+{ int getResult()
+	{return 6;}
+}
+class Note extends Colour
+{
+	int getResult()
+	{return 7;}
+}
+class Text extends Colour
+{int getResult()
+	{return 8;}
+}
+class Novel extends Colour
+{int getResult()
+	{return 9;}
+}
+	
+ public class Pgm1
+{
+	public static void main(String[] args)
+	{Note n=new Note();
+	Text t=new Text();
+	Novel no=new Novel();
+	System.out.println(" "+n.getResult());
+	System.out.println(" "+t.getResult());
+	System.out.println(" "+no.getResult());
+	}
+}

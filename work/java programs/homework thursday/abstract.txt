@@ -1,0 +1,17 @@
+4.
+abstract class Bird
+{
+	abstract void eat();  
+}  
+public class Kingfisher extends Bird
+{  
+	void eat()
+	{
+		System.out.println("eating");
+	}  
+	public static void main(String args[])
+	{  
+		Bird obj = new Kingfisher();  
+		obj.eat();  
+	}  
+}  
